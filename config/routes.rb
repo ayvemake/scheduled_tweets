@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   post "/sign-up", to: "registrations#create"
   get "/login", to: "sessions#new"
   post "/login", to: "sessions#create"
-  
+  get "password", to: "passwords#edit", as: :edit_password
+  patch "password", to: "passwords#update"
   delete "/logout", to: "sessions#destroy"
   
 end
