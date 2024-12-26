@@ -8,6 +8,10 @@ Rails.application.routes.draw do
   post "/login", to: "sessions#create"
   get "password", to: "passwords#edit", as: :edit_password
   patch "password", to: "passwords#update"
+  get "password/reset", to: "password_resets#new"
+  post "password/reset", to: "password_resets#create" 
+
+
   delete "/logout", to: "sessions#destroy"
   
 end
